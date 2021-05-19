@@ -23,5 +23,10 @@ public class CategoriaService {
 //		Optional<Categoria> obj = repo.findById(id);
 //		return obj.orElse(null);
 	}
+	
+	public Categoria insert (Categoria obj) {
+		obj.setId(null);
+		return repo.save(obj);
+	}
 
 }
